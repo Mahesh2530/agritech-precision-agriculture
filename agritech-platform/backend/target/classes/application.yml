@@ -1,0 +1,57 @@
+spring:
+  application:
+    name: precision-agri-platform
+  profiles:
+    active: dev
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    open-in-view: false
+
+server:
+  port: 8080
+
+app:
+  jwt:
+    secret: "change-this-to-a-long-random-secret-at-least-32-bytes-in-production"
+    expiration-ms: 86400000 # 24h
+  irrigation:
+    strategy: threshold # switch to 'ml' once an inference service is deployed
+    ml-endpoint: http://localhost:8500/predict
+  scheduler:
+    irrigation-sweep-ms: 300000   # 5 min
+    offline-sweep-ms: 300000      # 5 min
+    analytics-cron: "0 10 0 * * *" # 00:10 daily
+
+---
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:h2:mem:agritech;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/agritech}
+    username: ${DB_USERNAME:agritech}
+    password: ${DB_PASSWORD:agritech}
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: validate

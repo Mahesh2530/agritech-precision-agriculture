@@ -1,0 +1,30 @@
+:root {
+  /* Color — "field instrument panel at dusk": moss-charcoal surfaces, LCD-readout accents */
+  --bg: #12150F;
+  --surface: #1B2016;
+  --surface-raised: #232A1C;
+  --surface-hover: #2A3222;
+  --border: #37402C;
+  --border-soft: #262E1E;
+
+  --text-primary: #ECEEE3;
+  --text-secondary: #B7BFA8;
+  --text-muted: #7C8770;
+
+  --accent-growth: #8FC93A;   /* chlorophyll green — healthy / optimal */
+  --accent-growth-dim: #4E6B24;
+  --accent-water: #4FA9D8;    /* irrigation blue */
+  --accent-water-dim: #2C5A72;
+  --accent-alert: #E8A33D;    /* amber — warning */
+  --accent-critical: #E15B5B; /* muted rust-red — critical */
+
+  --font-display: 'Space Grotesk', 'Inter', sans-serif;
+  --font-body: 'Inter', -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', monospace;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+
+  --shadow-panel: inset 0 1px 0 rgba(255,255,255,0.03), 0 1px 3px rgba(0,0,0,0.4);
+}

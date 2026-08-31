@@ -1,0 +1,5 @@
+package com.agritech.platform.domain;
+
+public enum AlertType {
+    LOW_MOISTURE, SENSOR_OFFLINE, DEVICE_FAULT, HIGH_TEMPERATURE, FROST_RISK, IRRIGATION_STARTED, IRRIGATION_COMPLETED
+}
