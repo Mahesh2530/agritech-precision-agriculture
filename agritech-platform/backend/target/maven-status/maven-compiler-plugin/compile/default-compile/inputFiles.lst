@@ -4,6 +4,7 @@ C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\AlertController.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\AnalyticsController.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\AuthController.java
+C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\ExternalDataController.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\FarmController.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\FieldController.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\controller\IrrigationController.java
@@ -52,6 +53,7 @@ C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\security\JwtUtil.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\service\alert\AlertEvaluationService.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\service\analytics\AnalyticsService.java
+C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\service\external\NwdpWindService.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\service\irrigation\IrrigationAutomationService.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\service\irrigation\IrrigationDecision.java
 C:\Users\Lenovo\Desktop\soaproject2\agritech-platform\backend\src\main\java\com\agritech\platform\service\irrigation\IrrigationDecisionStrategy.java

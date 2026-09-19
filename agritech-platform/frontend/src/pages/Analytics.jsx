@@ -10,6 +10,7 @@ export default function Analytics() {
   const [selectedFieldId, setSelectedFieldId] = useState(null)
   const [summary, setSummary] = useState(null)
   const [days, setDays] = useState(14)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     listFarms().then(async (farms) => {
@@ -21,7 +22,12 @@ export default function Analytics() {
   }, [])
 
   useEffect(() => {
-    if (selectedFieldId) getFieldSummary(selectedFieldId, days).then(setSummary)
+    if (selectedFieldId) {
+      setError(null)
+      getFieldSummary(selectedFieldId, days)
+        .then(setSummary)
+        .catch((requestError) => setError(requestError?.response?.data?.message || 'Analytics data could not be loaded.'))
+    }
   }, [selectedFieldId, days])
 
   return (
@@ -43,7 +49,9 @@ export default function Analytics() {
         }
       />
       <div className="page-content">
-        {!summary || summary.series.length === 0 ? (
+        {error ? (
+          <div className="card" style={{ color: 'var(--accent-critical)' }}>{error}</div>
+        ) : !summary || summary.series.length === 0 ? (
           <div className="card" style={{ color: 'var(--text-muted)' }}>
             No rollup data yet. The nightly analytics job populates this once a day of telemetry has been collected —
             see ARCHITECTURE.md for the rollup schedule.

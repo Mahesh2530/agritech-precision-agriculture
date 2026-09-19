@@ -7,6 +7,7 @@ import Farms from './pages/Farms'
 import Irrigation from './pages/Irrigation'
 import Alerts from './pages/Alerts'
 import Analytics from './pages/Analytics'
+import WindData from './pages/WindData'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/irrigation" element={<Irrigation />} />
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/analytics" element={<Analytics />} />
+          <Route path="/wind-data" element={<WindData />} />
         </Route>
       </Routes>
     </AuthProvider>

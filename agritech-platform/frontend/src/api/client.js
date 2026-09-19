@@ -15,7 +15,7 @@ client.interceptors.request.use((config) => {
 client.interceptors.response.use(
   (response) => response,
   (error) => {
-    if (error.response && error.response.status === 401) {
+    if (error.response && [401, 403].includes(error.response.status)) {
       localStorage.removeItem('agritech_token')
       localStorage.removeItem('agritech_user')
       if (window.location.pathname !== '/login') {

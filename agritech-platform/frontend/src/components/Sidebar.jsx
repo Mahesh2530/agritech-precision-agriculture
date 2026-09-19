@@ -7,6 +7,7 @@ const NAV_ITEMS = [
   { to: '/irrigation', label: 'Irrigation', icon: '⌁' },
   { to: '/alerts', label: 'Alerts', icon: '▲' },
   { to: '/analytics', label: 'Analytics', icon: '≋' },
+  { to: '/wind-data', label: 'Wind Data', icon: '◌' },
 ]
 
 export default function Sidebar() {

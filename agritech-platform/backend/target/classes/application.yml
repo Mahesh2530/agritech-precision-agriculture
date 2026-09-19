@@ -24,6 +24,9 @@ app:
     irrigation-sweep-ms: 300000   # 5 min
     offline-sweep-ms: 300000      # 5 min
     analytics-cron: "0 10 0 * * *" # 00:10 daily
+  nwdp:
+    base-url: https://www.nwdp.nwic.gov.in/api/3/action/datastore_search
+    resource-id: a2a13ede-4a16-4484-a66d-e7953cbd57bb
 
 ---
 spring:
