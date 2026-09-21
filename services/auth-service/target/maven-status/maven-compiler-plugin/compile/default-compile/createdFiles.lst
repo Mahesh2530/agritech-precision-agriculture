@@ -1,0 +1,9 @@
+com\agritech\auth\AuthDtos$LoginRequest.class
+com\agritech\auth\AuthDtos$RegisterRequest.class
+com\agritech\auth\User.class
+com\agritech\auth\AuthService.class
+com\agritech\auth\Role.class
+com\agritech\auth\AuthController.class
+com\agritech\auth\AuthDtos.class
+com\agritech\auth\AuthServiceApplication.class
+com\agritech\auth\SecurityConfig.class

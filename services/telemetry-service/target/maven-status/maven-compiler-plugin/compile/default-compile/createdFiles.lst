@@ -1,0 +1,3 @@
+com\agritech\telemetry\TelemetryServiceApplication.class
+com\agritech\telemetry\TelemetryController.class
+com\agritech\telemetry\TelemetryController$IngestRequest.class

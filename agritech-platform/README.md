@@ -40,8 +40,27 @@ subscription, yield correlation, etc.) so you know exactly where to extend it ne
 - Rule-based automated irrigation with a clean interface for swapping in an ML strategy later
 - Threshold + sensor-offline alerting
 - Nightly analytics rollups (moisture trend, water usage, irrigation cycles) with a summary API
+- API Gateway layer with centralized routing, JWT validation, rate limiting, and circuit breaking
 - A distinctive "field instrument panel" UI — dark moss/charcoal theme, mono-font telemetry
   readouts, live charts (Recharts), field map (Leaflet)
+
+## API Gateway Layer
+
+A dedicated gateway module is included under `gateway/` to act as the single entry point for the platform:
+
+- Routes `/api/auth/**`, `/api/**`, `/ws/**`, and `/h2-console/**`
+- Validates JWT access tokens at the gateway before forwarding protected requests
+- Enforces request throttling and circuit breaker protection for upstream backend calls
+- Returns a fallback response when the backend is unavailable
+
+Run it with:
+
+```bash
+cd gateway
+mvn spring-boot:run
+```
+
+The gateway listens on `http://localhost:8085` and forwards traffic to the backend at `http://localhost:8080`.
 
 ## Note on this build
 

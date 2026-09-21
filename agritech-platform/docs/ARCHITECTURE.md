@@ -32,6 +32,15 @@ points for the ML and analytics scope so the codebase doesn't need to be re-arch
                                                 │ MQTT / HTTP (gateway)
                                                 ▼
                           ┌───────────────────────────────────────┐
+                          │        API Gateway (Spring Cloud)       │
+                          │  - JWT validation                       │
+                          │  - Rate limiting / circuit breaker      │
+                          │  - Routing to backend services          │
+                          │  - Request tracing / health checks      │
+                          └────────────┬────────────────────────────┘
+                                       │
+                                       ▼
+                          ┌───────────────────────────────────────┐
                           │        Spring Boot Backend             │
                           │                                         │
                           │  ┌───────────────┐   ┌───────────────┐ │

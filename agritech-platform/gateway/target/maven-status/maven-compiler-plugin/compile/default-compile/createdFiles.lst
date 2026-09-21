@@ -1,0 +1,4 @@
+com\agritech\gateway\AgriGatewayApplication.class
+com\agritech\gateway\config\GatewaySecurityConfig.class
+com\agritech\gateway\config\JwtAuthenticationFilter.class
+com\agritech\gateway\controller\GatewayFallbackController.class
