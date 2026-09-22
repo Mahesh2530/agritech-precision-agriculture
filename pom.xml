@@ -20,10 +20,10 @@
     <modules>
         <module>agritech-platform/eureka-server</module>
         <module>agritech-platform/gateway</module>
-        <module>services/auth-service</module>
-        <module>services/farm-service</module>
-        <module>services/telemetry-service</module>
-        <module>services/analytics-service</module>
+        <module>agritech-platform/services/auth-service</module>
+        <module>agritech-platform/services/farm-service</module>
+        <module>agritech-platform/services/telemetry-service</module>
+        <module>agritech-platform/services/analytics-service</module>
     </modules>
 
     <properties>
